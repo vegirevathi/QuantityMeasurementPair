@@ -13,4 +13,11 @@ public class QuantityMeasurementTest {
         QuantityType feet2 = new QuantityType(Unit.FEET, 0.0);
         Assert.assertEquals(feet1, feet2);
     }
+
+    @Test
+    public void givenSameInchValue_ShouldReturnEqual() {
+        QuantityType inch1 = new QuantityType(Unit.INCH, 0.0);
+        QuantityType inch2 = new QuantityType(Unit.INCH, 0.0);
+        Assert.assertEquals(inch1, inch2);
+    }
 }
