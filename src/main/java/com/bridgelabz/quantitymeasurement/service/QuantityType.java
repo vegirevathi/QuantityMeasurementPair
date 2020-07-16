@@ -2,10 +2,12 @@ package com.bridgelabz.quantitymeasurement.service;
 
 import com.bridgelabz.quantitymeasurement.enums.Unit;
 
+import java.util.Objects;
+
 public class QuantityType {
 
-    private final Unit unit;
-    private final double value;
+    public final Unit unit;
+    public final double value;
 
 
     public QuantityType(Unit unit, double value) {
@@ -22,6 +24,10 @@ public class QuantityType {
                 unit == quantityType.unit;
     }
 
-    public boolean compare(QuantityType inch) {
+    public boolean compare(QuantityType that) {
+        double value1 = Unit.getValue(this);
+        double value2 = Unit.getValue(that);
+        return Objects.equals(value1, value2);
     }
 }
+
