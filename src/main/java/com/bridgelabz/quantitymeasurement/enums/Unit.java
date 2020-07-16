@@ -3,7 +3,7 @@ package com.bridgelabz.quantitymeasurement.enums;
 import com.bridgelabz.quantitymeasurement.service.QuantityType;
 
 public enum Unit {
-    FEET(12), INCH(1);
+    FEET(12), INCH(1), YARD(36);
 
     private double value;
 
