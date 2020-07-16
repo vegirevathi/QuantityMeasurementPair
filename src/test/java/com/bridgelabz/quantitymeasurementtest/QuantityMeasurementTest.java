@@ -20,4 +20,12 @@ public class QuantityMeasurementTest {
         QuantityType inch2 = new QuantityType(Unit.INCH, 0.0);
         Assert.assertEquals(inch1, inch2);
     }
+
+    @Test
+    public void givenFeetAndInches_WhenLengthsAreEqual_ShouldReturnTrue() {
+        QuantityType feet = new QuantityType(Unit.FEET, 1.0);
+        QuantityType inch = new QuantityType(Unit.INCH, 12.0);
+        boolean compareCheck = feet.compare(inch);
+        Assert.assertTrue(compareCheck);
+    }
 }

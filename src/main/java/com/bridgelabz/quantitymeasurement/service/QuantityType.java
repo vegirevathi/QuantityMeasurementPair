@@ -21,4 +21,7 @@ public class QuantityType {
         return Double.compare(quantityType.value, value) == 0 &&
                 unit == quantityType.unit;
     }
+
+    public boolean compare(QuantityType inch) {
+    }
 }
