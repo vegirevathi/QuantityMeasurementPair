@@ -28,4 +28,12 @@ public class QuantityMeasurementTest {
         boolean compareCheck = feet.compare(inch);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void givenThreeFeetAndOneYard_WhenCompare_ShouldReturnTrue() {
+        QuantityType feet = new QuantityType(Unit.FEET, 3.0);
+        QuantityType yard = new QuantityType(Unit.YARD, 1.0);
+        boolean compareCheck = feet.compare(yard);
+        Assert.assertTrue(compareCheck);
+    }
 }
